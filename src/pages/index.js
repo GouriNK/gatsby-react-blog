@@ -5,6 +5,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import '../styles/fonts.css'
+import '../styles/variables.css'
+import '../styles/base.css'
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />

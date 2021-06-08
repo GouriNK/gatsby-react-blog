@@ -1,0 +1,9 @@
+:root {
+    --max-screen-width: 960px;
+
+    --color-white: #f6f6f6ff;
+    --color-light-grey: #e8e8e8ff;
+    --color-dark-grey: #333333ff;
+    --color-light-red: #d90429ff;
+    --color-dark-red: #b90504ff;
+}
