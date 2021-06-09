@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
-// import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import "./header.css";
 
 const Header = ({ siteTitle }) => {
 
   const [ showHamburgerMenu, setShowHamburgerMenu ] = useState(true);
+  const [ showSearchForm, setShowSearchForm ] = useState(false);
+  const [ searchTerm, setSearchTerm ] = useState('');
+
+  const toggleNavMenu = () => {
+    setShowHamburgerMenu(!showHamburgerMenu);
+    setShowSearchForm(false);
+  }
+
+  const toggleSearchForm = () => {
+    setShowSearchForm(!showSearchForm);
+    setShowHamburgerMenu(true);
+  }
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    console.log(searchTerm);
+    // onSubmit(term);
+  };
 
   return (
       <header className="header">
@@ -17,10 +35,8 @@ const Header = ({ siteTitle }) => {
           </div>
           <div className="header-links-block">
             <nav className="header-nav">
-              {/* <button className="header-nav-toggle" aria-expanded="false" type="button" aria-label="menu"> */}
-              <MenuOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? `show-icon`: null}`} onClick={() => setShowHamburgerMenu(!showHamburgerMenu)} fontSize="large"/>
-              <CloseOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? null : `show-icon` }`} onClick={() => setShowHamburgerMenu(!showHamburgerMenu)} fontSize="large"/>
-              {/* </button> */}
+              <MenuOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? `show-icon`: null}`} onClick={toggleNavMenu} fontSize="large"/>
+              <CloseOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? null : `show-icon` }`} onClick={toggleNavMenu} fontSize="large"/>
               <ul className={`header-nav-wrapper ${ showHamburgerMenu ? null : `active` }`}>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/">Cards</Link></li>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Boards</Link></li>
@@ -29,15 +45,19 @@ const Header = ({ siteTitle }) => {
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Contact</Link></li>
               </ul>
             </nav>
-            {/* <div className="header-search">
-              <button className="header-search-toggle" aria-label="Open search">
-                Search
-              </button>
-              <form className="header-search-form" action="">
-                <label className="sr-only" for="search">Search</label>
-                <input type="search" name="" id="search" placeholder="What's on your mind?"/>
+            <div className="header-search">
+              <SearchOutlinedIcon className="header-search-toggle" onClick={toggleSearchForm} fontSize="large"/>
+              <form className={`header-search-form ${ showSearchForm ? `active` : null }`} onSubmit={onFormSubmit}>
+                <label className="sr-only" htmlFor="search">Search</label>
+                <input 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)} 
+                  type="search" 
+                  name="" 
+                  id="search" 
+                  placeholder="Enter keyword here..."/>
               </form>
-            </div> */}
+            </div>
           </div>
           </div>
       </header>
