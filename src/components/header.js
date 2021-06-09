@@ -1,10 +1,14 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react";
+import { Link } from "gatsby";
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 // import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
+import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import "./header.css";
 
 const Header = ({ siteTitle }) => {
+
+  const [ showHamburgerMenu, setShowHamburgerMenu ] = useState(true);
+
   return (
       <header className="header">
         <div className="header-wrapper">
@@ -14,9 +18,10 @@ const Header = ({ siteTitle }) => {
           <div className="header-links-block">
             <nav className="header-nav">
               {/* <button className="header-nav-toggle" aria-expanded="false" type="button" aria-label="menu"> */}
-              <MenuOutlinedIcon className="header-nav-toggle" fontSize="large"/>
+              <MenuOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? `show-icon`: null}`} onClick={() => setShowHamburgerMenu(!showHamburgerMenu)} fontSize="large"/>
+              <CloseOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? null : `show-icon` }`} onClick={() => setShowHamburgerMenu(!showHamburgerMenu)} fontSize="large"/>
               {/* </button> */}
-              <ul className="header-nav-wrapper">
+              <ul className={`header-nav-wrapper ${ showHamburgerMenu ? null : `active` }`}>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/">Cards</Link></li>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Boards</Link></li>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Food</Link></li>
