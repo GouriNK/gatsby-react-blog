@@ -1,13 +1,13 @@
 ---
-slug: /cards/love-letter
-thumbnailImage: ./love-letter.jpeg
-type: card
-title: Love Letter
-tags: ["love letter", "card game"]
-date: 2021-06-09T10:36
+slug: /boards/villagers
+thumbnailImage: ./villagers.png
+title: Villagers
+type : card
+tags: ["villagers", "farm game"]
+date: 2021-06-09T10:35
 author: Gouri Nandakumar
-time: 20 mins
-playerCount: 2-6
+time: 45 mins
+playerCount: 1-4
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 
@@ -40,7 +40,7 @@ crudelia* parato duxque.
 > nefas vos inter astris habemus visa modo virum si Phaethon **nitore**, habent,
 > est manus.
 
-![alt text](./love-letter.jpeg "Tooltip for Love Letter")
+![alt text](./agricola.jpeg "Tooltip for Agricola")
 
 ## Colle igni
 
