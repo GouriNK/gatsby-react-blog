@@ -3,11 +3,12 @@ slug: /cards/love-letter
 thumbnailImage: ./love-letter.jpeg
 type: card
 title: Love Letter
-tags: ["love letter", "card game"]
+tags: ["love letter", "cardgame"]
 date: 2021-06-09T10:36
 author: Gouri Nandakumar
 time: 20 mins
 playerCount: 2-6
+previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo 
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 

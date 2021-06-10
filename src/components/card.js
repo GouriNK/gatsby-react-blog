@@ -12,6 +12,12 @@ const Card = ({cardDetails}) => {
     const cardHeader = cardDetails.frontmatter;
     const thumbnail = getImage(cardHeader.thumbnailImage);
 
+    let tagString = "";
+
+    for (const [index, value] of cardHeader.tags.entries()) {
+        tagString = tagString + `#${value} `;
+    }
+
     return (
         <div className="card">
             <GatsbyImage 
@@ -34,9 +40,7 @@ const Card = ({cardDetails}) => {
                 </h1>
             </div>
             <div className="card-content">
-                <p>
-                    Tailwind CSS v2.1 introduces a new just-in-time compiler for Tailwind CSS that generates your styles on-demand...
-                </p>
+                <p>{cardHeader.previewText}</p>
                 <Link to={cardHeader.slug}>
                     Read More...
                 </Link>
@@ -45,7 +49,7 @@ const Card = ({cardDetails}) => {
                 <div className="card-footer-wrapper">
                     <div className="card-footer-left">
                         <div>
-                            <p className="card-tags">{cardHeader.tags}</p>
+                            <p className="card-tags"><b>{tagString}</b></p>
                             <p className="card-time-to-read">{cardDetails.timeToRead} min read</p>
                         </div>
                     </div>

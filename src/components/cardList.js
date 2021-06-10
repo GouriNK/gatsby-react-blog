@@ -26,6 +26,7 @@ const CardList = (type) => {
                     }
                     time
                     type
+                    previewText
                     }
                     timeToRead
                 }

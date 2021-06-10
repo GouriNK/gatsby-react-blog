@@ -37,7 +37,11 @@
 }
 
 .card-type {
-    padding-top: 8px;
+    padding-top: 3px;
+}
+
+.card-time-icon {
+    font-size: 19px !important;
 }
 
 .card-time {

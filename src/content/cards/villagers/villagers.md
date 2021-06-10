@@ -3,11 +3,12 @@ slug: /boards/villagers
 thumbnailImage: ./villagers.png
 title: Villagers
 type : card
-tags: ["villagers", "farm game"]
+tags: ["villagers", "farmgame"]
 date: 2021-06-09T10:35
 author: Gouri Nandakumar
 time: 45 mins
 playerCount: 1-4
+previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 

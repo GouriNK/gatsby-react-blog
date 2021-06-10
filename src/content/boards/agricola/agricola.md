@@ -3,11 +3,12 @@ slug: /boards/agricola
 thumbnailImage: ./agricola.jpeg
 title: Agricola
 type : board
-tags: ["agricola", "farm game"]
+tags: ["agricola", "farmgame"]
 date: 2021-06-09T10:35
 author: Gouri Nandakumar
 time: 45 mins
 playerCount: 1-4
+previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo 
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 
