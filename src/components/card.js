@@ -1,49 +1,58 @@
 import React from "react";
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import GroupIcon from '@material-ui/icons/Group';
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./card.css";
 
-const Card = () => {
+const Card = ({cardDetails}) => {
+
+    console.log(cardDetails);
+
+    const cardHeader = cardDetails.frontmatter;
+    const thumbnail = getImage(cardHeader.thumbnailImage);
+
     return (
         <div className="card">
-            <img 
+            <GatsbyImage 
                 className="card-image"
-                src="http://www.3forty.media/ruki/wp-content/uploads/2020/06/meditation-yoga-1024x682.jpg" 
-                alt="thumbnail" 
-                loading="lazy"
-            ></img>
+                image={thumbnail} 
+                alt={cardHeader.title}
+            />
             <div className="card-type-time">
-                <span className="card-type">Type Name</span>
+                <span className="card-type">{cardHeader.type}</span>
                 <span className="card-time">
                     <ScheduleIcon className="card-time-icon"/>
-                    <p>Time</p>
+                    <p>{cardHeader.time}</p>
                 </span>
             </div>
             <div className="card-heading">
                 <h1>
-                    <a href="#"> JIT Mode - A faster, more powerful</a>
+                    <Link to={cardHeader.slug}>
+                    {cardHeader.title}
+                    </Link>
                 </h1>
             </div>
             <div className="card-content">
                 <p>
                     Tailwind CSS v2.1 introduces a new just-in-time compiler for Tailwind CSS that generates your styles on-demand...
                 </p>
-                <a href="#">
+                <Link to={cardHeader.slug}>
                     Read More...
-                </a>
+                </Link>
             </div>
             <div className="card-footer">
                 <div className="card-footer-wrapper">
                     <div className="card-footer-left">
                         <div>
-                            <p className="card-tags">#tag1 #tag2 #tag3</p>
-                            <p className="card-time-to-read">2 min read</p>
+                            <p className="card-tags">{cardHeader.tags}</p>
+                            <p className="card-time-to-read">{cardDetails.timeToRead} min read</p>
                         </div>
                     </div>
                     <div className="card-footer-right">
                         <div>
                             <GroupIcon className="card-user-icon"/>
-                            <p className="card-number-of-users">10</p>
+                            <p className="card-number-of-users">{cardHeader.playerCount}</p>
                         </div>
                     </div>
                 </div>

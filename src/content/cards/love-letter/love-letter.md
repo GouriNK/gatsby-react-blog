@@ -6,6 +6,8 @@ title: Love Letter
 tags: ["love letter", "card game"]
 date: 2021-06-09T10:36
 author: Gouri Nandakumar
+time: 20 mins
+playerCount: 2-6
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 
