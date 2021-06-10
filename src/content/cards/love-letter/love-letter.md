@@ -1,6 +1,7 @@
 ---
 slug: /boards/love-letter
 thumbnailImage: ./love-letter.jpeg
+type: card
 title: Love Letter
 tags: ["love letter", "card game"]
 date: 2021-06-09T10:36

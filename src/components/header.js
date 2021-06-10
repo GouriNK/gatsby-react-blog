@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
 
   return (
       <header className="header">
-        <div className="header-wrapper">
+        <div className="header-wrapper container">
           <div className="header-logo-block">
             <Link to="/" className="header-logo white-link">{siteTitle}</Link>
           </div>

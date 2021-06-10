@@ -5,9 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import '../styles/fonts.css'
-import '../styles/variables.css'
-import '../styles/base.css'
+import '../styles/index.css'
 
 const IndexPage = () => (
   <Layout>
@@ -21,7 +19,7 @@ const IndexPage = () => (
       quality={95}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
+      style={{ marginBottom: `24px` }}
     />
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />    </p>
