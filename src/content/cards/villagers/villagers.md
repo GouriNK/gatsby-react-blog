@@ -1,5 +1,5 @@
 ---
-slug: /boards/villagers
+slug: /cards/villagers
 thumbnailImage: ./villagers.png
 title: Villagers
 type : card
