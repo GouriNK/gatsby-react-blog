@@ -8,7 +8,8 @@ date: 2021-06-09T10:36
 author: Gouri Nandakumar
 time: 20 mins
 playerCount: 2-6
-previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo 
+previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo
+isLightThemeCard: true
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 

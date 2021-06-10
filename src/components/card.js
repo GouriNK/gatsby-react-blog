@@ -19,14 +19,14 @@ const Card = ({cardDetails}) => {
     }
 
     return (
-        <div className="card">
+        <div className={`card ${ cardHeader.isLightThemeCard ? `light-bg` : ''}`}>
             <GatsbyImage 
                 className="card-image"
                 image={thumbnail} 
                 alt={cardHeader.title}
             />
             <div className="card-type-time">
-                <span className="card-type">{cardHeader.type}</span>
+                <span className={`card-type ${cardHeader.type}`}>{cardHeader.type}</span>
                 <span className="card-time">
                     <ScheduleIcon className="card-time-icon"/>
                     <p>{cardHeader.time}</p>

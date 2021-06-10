@@ -24,7 +24,7 @@ a {
 }
 
 a.white-link, .white-link a {
-	color: var(--color-light-grey);
+	color: var(--color-lighter-grey);
 }
 
 a:hover, a:focus {

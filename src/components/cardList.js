@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./card";
 import { graphql, useStaticQuery } from 'gatsby';
+import "./cardList.css";
 
 const CardList = (type) => {
 
@@ -27,6 +28,7 @@ const CardList = (type) => {
                     time
                     type
                     previewText
+                    isLightThemeCard
                     }
                     timeToRead
                 }
@@ -39,7 +41,7 @@ const CardList = (type) => {
     const cardList = allMarkdownRemark.edges;
 
     return (
-        <div>
+        <div className="cardlist">
         {
             cardList && cardList.map((item, i)=>{
                 let cardDetails  = item.node;

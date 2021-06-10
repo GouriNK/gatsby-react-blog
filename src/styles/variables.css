@@ -2,8 +2,15 @@
     --max-screen-width: 960px;
 
     --color-white: #f6f6f6ff;
-    --color-light-grey: #e8e8e8ff;
+    --color-lighter-grey: #e8e8e8ff;
+    --color-light-grey: #8D99AE;
     --color-dark-grey: #333333ff;
     --color-light-red: #d90429ff;
     --color-dark-red: #b90504ff;
+
+    --color-card: #ef476fff;
+    --color-board: #ffd166ff;
+    --color-tech: #06d6a0ff;
+    --color-recipe: #118ab2ff;
+    --color-travel: #073b4cff;
 }
