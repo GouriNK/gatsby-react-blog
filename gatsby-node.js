@@ -4,7 +4,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const blogTemplate = path.resolve(`src/templates/blogTemplate.js`)
-  // const authorTemplate = path.resolve(`src/templates/authorTemplate.js`)
+  const cardListTemplate = path.resolve(`src/templates/cardListTemplate.js`)
 
   const result = await graphql(`
     {
@@ -13,6 +13,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               slug
+              type
             }
           }
         }
@@ -26,11 +27,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    // const pageTemplate = (node.frontmatter.type == 'author' ? authorTemplate : bookTemplate)
     createPage({
       path: node.frontmatter.slug,
       component: blogTemplate,
       context: { slug : node.frontmatter.slug }
+    })
+  })
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.type,
+      component: cardListTemplate,
+      context: { type : node.frontmatter.type }
     })
   })
 }

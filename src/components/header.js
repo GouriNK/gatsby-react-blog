@@ -39,8 +39,8 @@ const Header = ({ siteTitle }) => {
               <CloseOutlinedIcon className={`header-nav-toggle ${ showHamburgerMenu ? null : `show-icon` }`} onClick={toggleNavMenu} fontSize="large"/>
               <ul className={`header-nav-wrapper ${ showHamburgerMenu ? null : `active` }`}>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/">Cards</Link></li>
-                <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Boards</Link></li>
-                <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Food</Link></li>
+                <li className="header-nav-item white-link"><Link activeClassName="active" to="/board">Boards</Link></li>
+                <li className="header-nav-item white-link"><Link activeClassName="active" to="/card">Food</Link></li>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Tech</Link></li>
                 <li className="header-nav-item white-link"><Link activeClassName="active" to="/page-2">Contact</Link></li>
               </ul>
