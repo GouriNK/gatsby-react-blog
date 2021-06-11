@@ -1,6 +1,6 @@
 ---
 slug: /cards/love-letter
-thumbnailImage: ./love-letter.jpeg
+thumbnailImage: ./love-letter.png
 type: card
 title: Love Letter
 tags: ["love letter", "cardgame"]
@@ -10,6 +10,7 @@ time: 20 mins
 playerCount: 2-6
 previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo
 isLightThemeCard: true
+landingImage: ./landing-image.jpeg
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 
@@ -42,7 +43,7 @@ crudelia* parato duxque.
 > nefas vos inter astris habemus visa modo virum si Phaethon **nitore**, habent,
 > est manus.
 
-![alt text](./love-letter.jpeg "Tooltip for Love Letter")
+![alt text](./love-letter.png "Tooltip for Love Letter")
 
 ## Colle igni
 

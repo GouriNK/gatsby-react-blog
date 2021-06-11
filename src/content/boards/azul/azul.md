@@ -10,6 +10,7 @@ time: 45 mins
 playerCount: 1-4
 previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo
 isLightThemeCard: false
+landingImage: ./landing-image.jpeg
 ---
 # Obliquaque narrat frondibus quoque deus qui mihi
 

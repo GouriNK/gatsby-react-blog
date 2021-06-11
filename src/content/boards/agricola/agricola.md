@@ -1,6 +1,6 @@
 ---
 slug: /boards/agricola
-thumbnailImage: ./agricola.jpeg
+thumbnailImage: ./agricola.jpg
 title: Agricola
 type : board
 tags: ["agricola", "farmgame"]
@@ -10,8 +10,9 @@ time: 45 mins
 playerCount: 1-4
 previewText: Illi Pleiadum, incubuit in nunc! Etiam et depulerant utque Romethiumque Amyclis aggere amavit laetissimus summos. Duo
 isLightThemeCard: true
+landingImage: ./landing-image.jpeg
 ---
-# Obliquaque narrat frondibus quoque deus qui mihi
+## Obliquaque narrat frondibus quoque deus qui mihi
 
 ## Graniferumque ante comites
 
@@ -42,7 +43,7 @@ crudelia* parato duxque.
 > nefas vos inter astris habemus visa modo virum si Phaethon **nitore**, habent,
 > est manus.
 
-![Agricola image](./agricola.jpeg "Tooltip for Agricola")
+![Agricola image](./agricola.jpg "Tooltip for Agricola")
 ## Colle igni
 
 Vestes lacrimis Maenalon secuta. Signans atque laevam est veniam litora.
