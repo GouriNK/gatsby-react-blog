@@ -42,8 +42,7 @@ crudelia* parato duxque.
 > nefas vos inter astris habemus visa modo virum si Phaethon **nitore**, habent,
 > est manus.
 
-![alt text](./agricola.jpeg "Tooltip for Agricola")
-
+![Agricola image](./agricola.jpeg "Tooltip for Agricola")
 ## Colle igni
 
 Vestes lacrimis Maenalon secuta. Signans atque laevam est veniam litora.

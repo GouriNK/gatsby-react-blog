@@ -42,7 +42,7 @@ crudelia* parato duxque.
 > nefas vos inter astris habemus visa modo virum si Phaethon **nitore**, habent,
 > est manus.
 
-![alt text](./agricola.jpeg "Tooltip for Agricola")
+![alt text](./villagers.png "Tooltip for Agricola")
 
 ## Colle igni
 

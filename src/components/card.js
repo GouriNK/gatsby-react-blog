@@ -14,8 +14,8 @@ const Card = ({cardDetails}) => {
 
     let tagString = "";
 
-    for (const [index, value] of cardHeader.tags.entries()) {
-        tagString = tagString + `#${value} `;
+    for (let i = 0; i< cardHeader.tags.length; i++) {
+        tagString = tagString + `#${cardHeader.tags[i]} `;
     }
 
     return (
