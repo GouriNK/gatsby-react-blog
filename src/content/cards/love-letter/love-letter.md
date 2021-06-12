@@ -3,7 +3,7 @@ slug: /cards/love-letter
 thumbnailImage: ./love-letter.png
 type: card
 title: Love Letter
-tags: ["love letter", "cardgame"]
+tags: ["loveletter", "cardgame"]
 date: 2021-06-09T10:36
 author: Gouri Nandakumar
 time: 20 mins

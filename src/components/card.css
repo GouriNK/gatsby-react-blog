@@ -46,6 +46,18 @@
     background-color: var(--color-board);
 }
 
+.card-type.recipe {
+    background-color: var(--color-recipe);
+}
+
+.card-type.tech {
+    background-color: var(--color-tech);
+}
+
+.card-type.travel {
+    background-color: var(--color-travel);
+}
+
 .card-time-icon {
     font-size: 19px !important;
 }
