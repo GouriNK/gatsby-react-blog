@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+import { StaticQuery, Link, graphql } from "gatsby";
+import Search from "./search"
 import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
@@ -21,11 +22,11 @@ const Header = ({ siteTitle }) => {
     setShowHamburgerMenu(true);
   }
 
-  const onFormSubmit = (event) => {
-    event.preventDefault();
-    console.log(searchTerm);
-    // onSubmit(term);
-  };
+  // const onFormSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(searchTerm);
+  //   // onSubmit(term);
+  // };
 
   return (
       <header className="header">
@@ -47,7 +48,7 @@ const Header = ({ siteTitle }) => {
             </nav>
             <div className="header-search">
               <SearchOutlinedIcon className="header-search-toggle" onClick={toggleSearchForm} fontSize="large"/>
-              <form className={`header-search-form ${ showSearchForm ? `active` : null }`} onSubmit={onFormSubmit}>
+              {/* <form className={`header-search-form ${ showSearchForm ? `active` : null }`} onSubmit={onFormSubmit}>
                 <label className="sr-only" htmlFor="search">Search</label>
                 <input 
                   value={searchTerm}
@@ -56,7 +57,19 @@ const Header = ({ siteTitle }) => {
                   name="" 
                   id="search" 
                   placeholder="Enter keyword here..."/>
-              </form>
+              </form> */}
+              <StaticQuery
+                query={graphql`
+                  query SearchIndexQuery {
+                    siteSearchIndex {
+                      index
+                    }
+                  }
+                `}
+                render={data => (
+                    <Search searchIndex={data.siteSearchIndex.index} />
+                )}
+              />
             </div>
           </div>
           </div>

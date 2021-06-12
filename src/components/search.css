@@ -1,0 +1,40 @@
+.search-form {
+	display: none
+}
+
+.search-form.active {
+	display: block
+}
+
+.search-form input {
+	min-width: 200px;
+	appearance: none;
+	border: 0;
+	background-color: var(--color-white);
+	border-radius: 0px;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.search-form-result-list {
+    background-color: white;
+}
+
+.search-form-result-list a {
+    background-color: white;
+}
+
+@media(max-width:799px) {
+    .search-form {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		background-color: var(--color-light-grey)
+	}
+	.search-form input {
+		width: 100%;
+		border-bottom: 1px solid var(--color-dark-grey);
+		padding: 16px;
+	}
+}
