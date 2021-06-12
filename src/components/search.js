@@ -16,11 +16,11 @@ export default class Search extends Component {
 
   render() {
     return (
-      <div className="search-form active">
+      <div className="search-form">
         <input type="text" value={this.state.query} onChange={this.search} />
         <ul className="search-form-result-list">
           {this.state.results.map(page => (
-            <li key={page.id}>
+            <li className="search-form-result-list-item" key={page.id}>
               <Link to={page.path}>{page.title}</Link>
               {/* {": " + page.tags.join(`,`)} */}
             </li>

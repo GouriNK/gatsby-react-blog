@@ -1,9 +1,5 @@
 .search-form {
-	display: none
-}
-
-.search-form.active {
-	display: block
+ z-index: 999;
 }
 
 .search-form input {
@@ -18,10 +14,20 @@
 
 .search-form-result-list {
     background-color: white;
+	margin: 0;
+	padding-inline-start: 0;
+	margin-bottom: -50px;
+	border: 2px solid var(--color-dark-grey);
+	border-top: none;
+	min-width: 200px;
 }
 
 .search-form-result-list a {
     background-color: white;
+}
+
+.search-form-result-list-item {
+	padding: 10px;
 }
 
 @media(max-width:799px) {

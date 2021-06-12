@@ -13,4 +13,11 @@
     --color-tech: #06d6a0ff;
     --color-recipe: #ff99c8;
     --color-travel: #9b5de5;
+
+    --max-width: 1140px;
+
+    --font-family-1: 'Montserrat', sans-serif;
+    --font-family-2: 'Amatic SC', cursive;
+    --font-family-3: 'Josefin Sans', sans-serif;
+    --font-family-4: 'Oswald', sans-serif;
 }

@@ -10,7 +10,6 @@ const Header = ({ siteTitle }) => {
 
   const [ showHamburgerMenu, setShowHamburgerMenu ] = useState(true);
   const [ showSearchForm, setShowSearchForm ] = useState(false);
-  const [ searchTerm, setSearchTerm ] = useState('');
 
   const toggleNavMenu = () => {
     setShowHamburgerMenu(!showHamburgerMenu);
@@ -22,15 +21,9 @@ const Header = ({ siteTitle }) => {
     setShowHamburgerMenu(true);
   }
 
-  // const onFormSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log(searchTerm);
-  //   // onSubmit(term);
-  // };
-
   return (
       <header className="header">
-        <div className="header-wrapper container">
+        <div className="header-wrapper">
           <div className="header-logo-block">
             <Link to="/" className="header-logo white-link">{siteTitle}</Link>
           </div>
@@ -48,28 +41,20 @@ const Header = ({ siteTitle }) => {
             </nav>
             <div className="header-search">
               <SearchOutlinedIcon className="header-search-toggle" onClick={toggleSearchForm} fontSize="large"/>
-              {/* <form className={`header-search-form ${ showSearchForm ? `active` : null }`} onSubmit={onFormSubmit}>
-                <label className="sr-only" htmlFor="search">Search</label>
-                <input 
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)} 
-                  type="search" 
-                  name="" 
-                  id="search" 
-                  placeholder="Enter keyword here..."/>
-              </form> */}
-              <StaticQuery
-                query={graphql`
-                  query SearchIndexQuery {
-                    siteSearchIndex {
-                      index
+              <div className={`header-search-form ${ showSearchForm ? `active` : null }`}>
+                <StaticQuery
+                  query={graphql`
+                    query SearchIndexQuery {
+                      siteSearchIndex {
+                        index
+                      }
                     }
-                  }
-                `}
-                render={data => (
-                    <Search searchIndex={data.siteSearchIndex.index} />
-                )}
-              />
+                  `}
+                  render={data => (
+                      <Search searchIndex={data.siteSearchIndex.index} />
+                  )}
+                />
+              </div>
             </div>
           </div>
           </div>
