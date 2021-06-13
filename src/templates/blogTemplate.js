@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import Seo from "../components/seo";
+import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ScheduleIcon from '@material-ui/icons/Schedule';
 import GroupIcon from '@material-ui/icons/Group';
@@ -13,10 +14,13 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={frontmatter.title} />
       <div className="blog">
         <ul className="blog-tags">
           {frontmatter.tags.map((value, index) => {
-            return <li key={index}><a href="#" className="blog-tag">{value}</a></li>
+            return <li key={index}>
+              <Link className="blog-tag" to={`/tags/${value}`}>{`#${value}`}</Link>
+            </li>
           })}
         </ul>
         <div className="blog-heading">

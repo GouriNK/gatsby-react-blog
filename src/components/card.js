@@ -12,12 +12,6 @@ const Card = ({cardDetails}) => {
     const cardHeader = cardDetails.frontmatter;
     const thumbnail = getImage(cardHeader.thumbnailImage);
 
-    let tagString = "";
-
-    for (let i = 0; i< cardHeader.tags.length; i++) {
-        tagString = tagString + `#${cardHeader.tags[i]} `;
-    }
-
     return (
         <div className={`card ${ cardHeader.isLightThemeCard ? `light-bg` : ''}`}>
             <GatsbyImage 
@@ -49,7 +43,16 @@ const Card = ({cardDetails}) => {
                 <div className="card-footer-wrapper">
                     <div className="card-footer-left">
                         <div>
-                            <p className="card-tags"><b>{tagString}</b></p>
+                            <p className="card-tags">
+                                <b>
+                                {
+                                    cardHeader.tags.map((tag,i) => (
+                                        <Link className={cardHeader.isLightThemeCard ? `` : 'white-link'} key={i} to={`tags/${tag}`}>{`#${tag} `}</Link>
+                                    ))
+                                }
+                                
+                                </b>
+                            </p>
                             <p className="card-time-to-read">{cardDetails.timeToRead} min read</p>
                         </div>
                     </div>

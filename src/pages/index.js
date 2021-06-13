@@ -9,7 +9,7 @@ import '../styles/index.css'
 const IndexPage = () => {
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="The Cardboard Shelf" />
       <CardList type="card"/>
     </Layout>
   )

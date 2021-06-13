@@ -33,21 +33,21 @@ const CardListTemplate = ({ data }) => {
             edges {
             node {
                 frontmatter {
-                title
-                slug
-                date
-                author
-                playerCount
-                tags
-                thumbnailImage {
-                    childImageSharp {
-                    gatsbyImageData(height: 250)
+                    title
+                    slug
+                    date
+                    author
+                    playerCount
+                    tags
+                    thumbnailImage {
+                        childImageSharp {
+                        gatsbyImageData(height: 250)
+                        }
                     }
-                }
-                time
-                type
-                previewText
-                isLightThemeCard
+                    time
+                    type
+                    previewText
+                    isLightThemeCard
                 }
                 timeToRead
             }
